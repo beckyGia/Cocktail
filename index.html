@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocktail Carousel</title>
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- external CSS link -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+
+    <section class="container">
+      <!--title-->
+      <div class="title">
+        <h2>Choose Cocktail</h2>
+        <div class="underline"></div>
+      </div>
+      <!--input and submit button-->
+      <div class="input">
+        <input type="text" name="" value="" id="input">
+        <button type="button" name="button" class="submit">Get Cocktail</button>
+      </div>
+      <!--review-->
+      <article class="cocktail">
+        <div class="img-container">
+          <img src="img/margarita.jpg" id="drink-img" alt="">
+        </div>
+        <h4 id="name">Margarita</h4>
+        <p id="job">Alcoholic</p>
+        <p id="instructions">Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to
+          moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and
+          never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.</p>
+        <!--pre next buttons-->
+        <div class="button-container">
+          <button class="prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <!-- random button -->
+        <button class="random-btn">Surprise Me</button>
+      </article>
+    </section>
+  </main>
+  <!-- javascript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
