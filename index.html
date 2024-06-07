@@ -15,44 +15,63 @@
 
 <body>
   <main>
-
-    <section class="container">
-      <!--title-->
-      <div class="title">
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <!-- import React from 'react' -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- import ReactDOM from 'react' -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script>
+      Babel.registerPreset('rascal-two@multifile-babel-standalone-react', {
+        presets: [[Babel.availablePresets['react']]], // Handle JSX
+        plugins: [[Babel.availablePlugins['transform-modules-umd']]], // Allow ESM importing
+        moduleId: 'main'
+      });
+    </script>
+    <!-- scripts must be in dependant order, aka App.js import Button.js, Button.js must appear before App.js -->
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./Cocktail.jsx"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./App.jsx"></script>
+    <script type="text/babel" data-presets="rascal-two@multifile-babel-standalone-react">
+      import App from './App'
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+    <!-- <section class="container"> -->
+    <!--title-->
+    <!-- <div class="title">
         <h2>Choose Cocktail</h2>
         <div class="underline"></div>
-      </div>
-      <!--input and submit button-->
-      <div class="input">
+      </div> -->
+    <!--input and submit button-->
+    <!-- <div class="input">
         <input type="text" name="" value="" id="input">
         <button type="button" name="button" class="submit">Get Cocktail</button>
+      </div> -->
+    <!--review-->
+    <!-- <article class="cocktail">
+      <div class="img-container">
+        <img src="img/margarita.jpg" id="drink-img" alt="">
       </div>
-      <!--review-->
-      <article class="cocktail">
-        <div class="img-container">
-          <img src="img/margarita.jpg" id="drink-img" alt="">
-        </div>
-        <h4 id="name">Margarita</h4>
-        <p id="job">Alcoholic</p>
-        <p id="instructions">Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to
-          moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and
-          never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.</p>
-        <!--pre next buttons-->
-        <div class="button-container">
-          <button class="prev-btn">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="next-btn">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
-        <!-- random button -->
-        <button class="random-btn">Surprise Me</button>
-      </article>
+      <h4 id="name">Margarita</h4>
+      <p id="job">Alcoholic</p>
+      <p id="instructions">Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to
+        moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and
+        never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.</p> -->
+    <!--pre next buttons-->
+    <!-- <div class="button-container">
+      <button class="prev-btn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="next-btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div> -->
+    <!-- random button -->
+    <!-- <button class="random-btn">suprise me</button>
+    </article>
     </section>
-  </main>
-  <!-- javascript -->
-  <script src="js/main.js"></script>
+  </main> -->
+    <!-- javascript -->
+    <!-- <script src="js/main.js"></script> -->
 </body>
 
 </html>
